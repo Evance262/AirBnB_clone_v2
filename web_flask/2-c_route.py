@@ -4,7 +4,6 @@ A script that starts a Flask application:
 Listening on 0.0.0.0:5000
 """
 from flask import Flask
-from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -25,7 +24,7 @@ def hbnb():
 def c_text(text):
     """displays: C followed by the value
         of the text variable"""
-    return f'C {escape(text)}'
+    return "C %s" % text.replace('_', '')
 
 
 if __name__ == "__main__":
