@@ -32,7 +32,7 @@ def c_text(text):
 def python_text(text="is cool"):
     """displays: Python followed by the value
         of the text variable"""
-    return "Python %s" % text.replace('_', '')
+    return "Python %s" % text.replace('_', ' ')
 
 
 if __name__ == "__main__":
