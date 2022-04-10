@@ -10,9 +10,12 @@ from models.amenity import Amenity
 from models.review import Review
 
 
-classes = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
+classes = {
+            'BaseModel': BaseModel, 'User': User, 'Place': Place,
             'State': State, 'City': City, 'Amenity': Amenity,
-            'Review': Review}
+            'Review': Review
+            }
+
 
 class FileStorage:
     """This class manages storage of hbnb models in JSON format"""
@@ -66,7 +69,6 @@ class FileStorage:
                 FileStorage.__objects[key] = class_name(**val)
         except FileNotFoundError:
             pass
-        
 
         def delete(self, obj=None):
             """deletes object from __objects if it's inside"""
@@ -75,7 +77,6 @@ class FileStorage:
                 if key in self.__objects:
                     del self.__objects[key]
             self.save()
-    
 
     def close(self):
         """
