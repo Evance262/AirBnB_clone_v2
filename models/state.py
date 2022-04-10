@@ -2,7 +2,7 @@
 """
     Implementation of the State class
 """
-from models.base_model import BaseModel, Base
+from models.base_model import BaseModel
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 from models.city import City
@@ -13,7 +13,7 @@ import models
 storage_type = getenv("HBNB_TYPE_STORAGE")
 
 
-class State(BaseModel, Base):
+class State(BaseModel):
     '''
         Implementation for the State.
     '''
